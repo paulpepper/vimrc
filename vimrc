@@ -2,9 +2,14 @@
 " Choose a colour scheme.
 colorscheme evening
 
+" Disable Ex mode to avoid unnecessary pain when hitting Q by mistake.
+:map Q <Nop>
+
 " Window navigation.
-map <c-j> <c-w>j
-map <c-k> <c-w>k
+nmap <silent> <c-j> :wincmd j<CR>
+nmap <silent> <c-k> :wincmd k<CR>
+nmap <silent> <c-h> :wincmd h<CR>
+nmap <silent> <C-l> :wincmd l<CR>
 
 " Don't use an additional line to show line number on non-active windows.
 set wmh=0
@@ -47,19 +52,19 @@ map <leader>u :GundoToggle<CR>
 syntax on
 filetype on
 filetype plugin indent on
-let g:pyflakes_use_quickfix = 0
+let g:pyflakes_use_quickfix=0
 
 " Pep8 validation.
 let g:pep8_map='<leader>8'
 
 " Tab completion.
 au FileType python set omnifunc=pythoncomplete#Complete
-let g:superTabDefaultCompletionType = "context"
+let g:superTabDefaultCompletionType="context"
 set completeopt=menuone,longest,preview
 
 " File browsing using NERDTree.
 map <leader>n :NERDTreeToggle<CR>
-let NERDTreeIgnore = ['\.pyc$']
+let NERDTreeIgnore=['\.pyc$']
 
 " Refactoring and goto definition.
 map <leader>j :RopeGotoDefinition<CR>
