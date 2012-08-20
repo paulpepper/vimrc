@@ -57,8 +57,9 @@ au FileType python set omnifunc=pythoncomplete#Complete
 let g:superTabDefaultCompletionType = "context"
 set completeopt=menuone,longest,preview
 
-" File browser.
+" File browsing using NERDTree.
 map <leader>n :NERDTreeToggle<CR>
+let NERDTreeIgnore = ['\.pyc$']
 
 " Refactoring and goto definition.
 map <leader>j :RopeGotoDefinition<CR>
