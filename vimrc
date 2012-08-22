@@ -5,11 +5,14 @@ colorscheme evening
 " Disable Ex mode to avoid unnecessary pain when hitting Q by mistake.
 :map Q <Nop>
 
-" Window navigation.
+" Window navigation shortcuts.
 nmap <silent> <c-j> :wincmd j<CR>
 nmap <silent> <c-k> :wincmd k<CR>
 nmap <silent> <c-h> :wincmd h<CR>
 nmap <silent> <C-l> :wincmd l<CR>
+" Buffer navigation shortcuts.
+map <C-m> :bnext<CR>
+map <C-n> :bprev<CR>
 
 " Don't use an additional line to show line number on non-active windows.
 set wmh=0
