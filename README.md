@@ -1,6 +1,6 @@
 Check out the project as `~/.vim` (assuming it doesn't currently exist).
 
-Get the projects submodules:
+Get the project's submodules:
 ```
 $ cd .vim
 $ git submodule init
