@@ -28,6 +28,9 @@ set tabstop=4
 set shiftwidth=4
 set softtabstop=4
 
+" Show a margin at column 80 on Python files.
+au FileType python set colorcolumn=80
+
 set smartindent
 "set autoindent
 set expandtab
