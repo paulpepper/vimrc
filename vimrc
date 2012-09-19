@@ -14,8 +14,14 @@ nmap <silent> <C-l> :wincmd l<CR>
 map <C-m> :bnext<CR>
 map <C-n> :bprev<CR>
 
+" Delete a buffer without closing its window.
+map <leader>bd :bn <bar> :bd#<CR>
+
 " Don't use an additional line to show line number on non-active windows.
 set wmh=0
+
+" Default preference is to not wrap text.
+set nowrap
 
 " Put yanked (copied) text to system clipboard.
 set clipboard=unnamed
@@ -32,8 +38,8 @@ set softtabstop=4
 au FileType python set colorcolumn=80
 
 set smartindent
-"set autoindent
 set expandtab
+"set autoindent
 "set smarttab
 
 " See following url for details about config below:
