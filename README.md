@@ -16,3 +16,13 @@ Install ack and pep8:
 ```
 $ sudo apt-get install ack-grep pep8
 ```
+
+Avoid key-binding conflicts with Makegreen, change:
+```
+"map <unique> <silent> <Leader>t :call MakeGreen()<cr>
+```
+to
+```
+map <unique> <silent> <Leader>g :call MakeGreen()<cr>
+```
+
