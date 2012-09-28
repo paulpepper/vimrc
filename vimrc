@@ -34,13 +34,13 @@ set tabstop=4
 set shiftwidth=4
 set softtabstop=4
 
-" Show a margin at column 80 on Python files.
-au FileType python set colorcolumn=80
-
-set smartindent
 set expandtab
+"set smartindent
 "set autoindent
 "set smarttab
+
+" Show a margin at column 80 on Python files.
+au FileType python set colorcolumn=80
 
 " See following url for details about config below:
 "     http://sontek.net/blog/detail/turning-vim-into-a-modern-python-ide
@@ -61,9 +61,9 @@ map <leader>td <Plug>TaskList
 map <leader>u :GundoToggle<CR>
 
 " Syntax highlighting and validation.
-syntax on
 filetype on
 filetype plugin indent on
+syntax on
 let g:pyflakes_use_quickfix=0
 
 " Pep8 validation.
