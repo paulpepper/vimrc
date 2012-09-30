@@ -1,6 +1,9 @@
 
+" Use Unicode.
+set encoding=utf-8
+
 " Choose a colour scheme.
-colorscheme evening
+colorscheme paul-elflord
 
 " Disable Ex mode to avoid unnecessary pain when hitting Q by mistake.
 :map Q <Nop>
@@ -11,11 +14,22 @@ nmap <silent> <c-k> :wincmd k<CR>
 nmap <silent> <c-h> :wincmd h<CR>
 nmap <silent> <C-l> :wincmd l<CR>
 " Buffer navigation shortcuts.
-map <C-m> :bnext<CR>
-map <C-n> :bprev<CR>
+nmap <C-m> :bnext<CR>
+nmap <C-n> :bprev<CR>
+
+" Toggle search highlighting.
+"\set hlsearch <BAR> s/=expand("<cword>")/<cr> <BAR>
+nmap <F3> :if &hlsearch <BAR>
+        \set nohlsearch <BAR>
+    \else <BAR>
+        \set hlsearch <BAR>
+    \endif <CR>
 
 " Delete a buffer without closing its window.
-map <leader>bd :bn <bar> :bd#<CR>
+nmap <leader>bd :bn <bar> :bd#<CR>
+
+" Toggle line numbering.
+nmap <F2> :set number! number?<CR>
 
 " Don't use an additional line to show line number on non-active windows.
 set wmh=0
