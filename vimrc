@@ -8,6 +8,9 @@ colorscheme paul-elflord
 " Disable Ex mode to avoid unnecessary pain when hitting Q by mistake.
 :map Q <Nop>
 
+" Map leader to more accessible ,
+:let mapleader = ","
+
 " Window navigation shortcuts.
 nmap <silent> <c-j> :wincmd j<CR>
 nmap <silent> <c-k> :wincmd k<CR>
