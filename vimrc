@@ -11,6 +11,10 @@ colorscheme paul-elflord
 " Map leader to more accessible ,
 :let mapleader = ","
 
+" Map unused key sequence to escape.
+inoremap jj <Esc>
+nnoremap JJJJ <Nop>
+
 " Window navigation shortcuts.
 nmap <silent> <c-j> :wincmd j<CR>
 nmap <silent> <c-k> :wincmd k<CR>
@@ -19,6 +23,12 @@ nmap <silent> <C-l> :wincmd l<CR>
 " Buffer navigation shortcuts.
 nmap <C-m> :bnext<CR>
 nmap <C-n> :bprev<CR>
+
+" Configure ctags
+let Tlist_Ctags_Cmd = "/usr/bin/ctags"
+let Tlist_WinWidth = 50
+map <F4> :TlistToggle<cr>
+map <F8> :!/usr/bin/ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
 
 " Toggle search highlighting.
 "\set hlsearch <BAR> s/=expand("<cword>")/<cr> <BAR>
@@ -31,14 +41,19 @@ nmap <F3> :if &hlsearch <BAR>
 " Delete a buffer without closing its window.
 nmap <leader>bd :bn <bar> :bd#<CR>
 
-" Toggle line numbering.
+" Toggle line numbering and default to on.
 nmap <F2> :set number! number?<CR>
+set number
 
 " Don't use an additional line to show line number on non-active windows.
 set wmh=0
 
 " Default preference is to not wrap text.
 set nowrap
+
+" Ignore case, but only if the search term doesn't contain capitals.
+set ignorecase
+set smartcase
 
 " Put yanked (copied) text to system clipboard.
 set clipboard=unnamed
