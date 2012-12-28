@@ -114,7 +114,8 @@ let NERDTreeIgnore=['\.pyc$']
 map <leader>j :RopeGotoDefinition<CR>
 map <leader>r :RopeRename<CR>
 
-" Search using ack-grep for fuzziness.
+" Locate the ack-grep command and use it to do fuzzy searches.
+let g:ackprg="ack-grep -H --nocolor --nogroup --column"
 nmap <leader>f <Esc>:Ack!
 
 " Python navigation stuff.

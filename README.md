@@ -16,6 +16,11 @@ Install ack and pep8:
 ```
 $ sudo apt-get install ack-grep pep8
 ```
+Add the following line to vimrc to locate the ack-grep command (already done
+in this repository's accompanying vimrc):
+```
+let g:ackprg="ack-grep -H --nocolor --nogroup --column"
+```
 
 Avoid key-binding conflicts with Makegreen, change:
 ```
