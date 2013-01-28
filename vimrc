@@ -24,8 +24,10 @@ nmap <silent> <C-l> :wincmd l<CR>
 nmap <C-m> :bnext<CR>
 nmap <C-n> :bprev<CR>
 
-" Toggle tagbar
+" Toggle tagbar.
 nmap <F9> :TagbarToggle<CR>
+let g:tagbar_autofocus = 1
+let g:tagbar_compact = 1
 
 " Configure ctags
 let Tlist_Ctags_Cmd = "/usr/bin/ctags"
