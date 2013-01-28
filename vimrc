@@ -16,13 +16,16 @@ inoremap jj <Esc>
 nnoremap JJJJ <Nop>
 
 " Window navigation shortcuts.
-nmap <silent> <c-j> :wincmd j<CR>
-nmap <silent> <c-k> :wincmd k<CR>
-nmap <silent> <c-h> :wincmd h<CR>
+nmap <silent> <C-j> :wincmd j<CR>
+nmap <silent> <C-k> :wincmd k<CR>
+nmap <silent> <C-h> :wincmd h<CR>
 nmap <silent> <C-l> :wincmd l<CR>
 " Buffer navigation shortcuts.
 nmap <C-m> :bnext<CR>
 nmap <C-n> :bprev<CR>
+
+" Toggle tagbar
+nmap <F9> :TagbarToggle<CR>
 
 " Configure ctags
 let Tlist_Ctags_Cmd = "/usr/bin/ctags"
@@ -39,7 +42,7 @@ nmap <F3> :if &hlsearch <BAR>
     \endif <CR>
 
 " Delete a buffer without closing its window.
-nmap <leader>bd :bn <bar> :bd#<CR>
+nmap <Leader>bd :bn <Bar> :bd#<CR>
 
 " Toggle line numbering and default to on.
 nmap <F2> :set number! number?<CR>
@@ -87,10 +90,10 @@ set foldmethod=indent
 set foldlevel=99
 
 " Task lists.
-map <leader>td <Plug>TaskList
+map <Leader>td <Plug>TaskList
 
 " Revision history.
-map <leader>u :GundoToggle<CR>
+map <Leader>u :GundoToggle<CR>
 
 " Syntax highlighting and validation.
 filetype on
@@ -99,7 +102,7 @@ syntax on
 let g:pyflakes_use_quickfix=0
 
 " Pep8 validation.
-let g:pep8_map='<leader>8'
+let g:pep8_map='<Leader>8'
 
 " Tab completion.
 au FileType python set omnifunc=pythoncomplete#Complete
@@ -107,16 +110,16 @@ let g:superTabDefaultCompletionType="context"
 set completeopt=menuone,longest,preview
 
 " File browsing using NERDTree.
-map <leader>n :NERDTreeToggle<CR>
+map <Leader>n :NERDTreeToggle<CR>
 let NERDTreeIgnore=['\.pyc$']
 
 " Refactoring and goto definition.
-map <leader>j :RopeGotoDefinition<CR>
-map <leader>r :RopeRename<CR>
+map <Leader>j :RopeGotoDefinition<CR>
+map <Leader>r :RopeRename<CR>
 
 " Locate the ack-grep command and use it to do fuzzy searches.
 let g:ackprg="ack-grep -H --nocolor --nogroup --column"
-nmap <leader>f <Esc>:Ack!
+nmap <Leader>f <Esc>:Ack!
 
 " Python navigation stuff.
 python << EOF
