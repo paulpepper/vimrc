@@ -29,12 +29,6 @@ nmap <F9> :TagbarToggle<CR>
 let g:tagbar_autofocus = 1
 let g:tagbar_compact = 1
 
-" Configure ctags
-let Tlist_Ctags_Cmd = "/usr/bin/ctags"
-let Tlist_WinWidth = 50
-map <F4> :TlistToggle<cr>
-map <F8> :!/usr/bin/ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
-
 " Toggle search highlighting.
 "\set hlsearch <BAR> s/=expand("<cword>")/<cr> <BAR>
 nmap <F3> :if &hlsearch <BAR>
@@ -112,7 +106,7 @@ let g:superTabDefaultCompletionType="context"
 set completeopt=menuone,longest,preview
 
 " File browsing using NERDTree.
-map <Leader>n :NERDTreeToggle<CR>
+map <F4> :NERDTreeToggle<CR>
 let NERDTreeIgnore=['\.pyc$']
 
 " Refactoring and goto definition.
@@ -122,6 +116,9 @@ map <Leader>r :RopeRename<CR>
 " Locate the ack-grep command and use it to do fuzzy searches.
 let g:ackprg="ack-grep -H --nocolor --nogroup --column"
 nmap <Leader>f <Esc>:Ack!
+
+" Partially hide the Windows line termination char (\\r).  
+match Ignore /\r$/
 
 " Python navigation stuff.
 python << EOF
