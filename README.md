@@ -31,3 +31,7 @@ to
 map <unique> <silent> <Leader>g :call MakeGreen()<cr>
 ```
 
+Create the directory in which Vim persistent undo data will be stored:
+
+    $ mkdir ~/.vim-undo
+
