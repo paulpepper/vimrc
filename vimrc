@@ -47,8 +47,10 @@ set number
 " Don't use an additional line to show line number on non-active windows.
 set wmh=0
 
-" Default preference is to not wrap text.
+" Default preference is to not wrap text, but if we do, then don't break
+" words.
 set nowrap
+set lbr
 
 " Ignore case, but only if the search term doesn't contain capitals.
 set ignorecase
