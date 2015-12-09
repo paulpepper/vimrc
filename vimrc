@@ -13,7 +13,7 @@ colorscheme paul-elflord
 
 " Map unused key sequence to escape.
 inoremap jj <Esc>
-nnoremap JJJJ <Nop>
+inoremap JJ <Esc>
 
 " Window navigation shortcuts.
 nmap <silent> <C-j> :wincmd j<CR>
@@ -91,7 +91,7 @@ set foldlevel=99
 map <Leader>td <Plug>TaskList
 
 " Revision history.
-map <Leader>u :GundoToggle<CR>
+"map <Leader>u :GundoToggle<CR>
 
 " Syntax highlighting and validation.
 filetype on
@@ -103,21 +103,21 @@ let g:pyflakes_use_quickfix=0
 let g:pep8_map='<Leader>8'
 
 " Tab completion.
-au FileType python set omnifunc=pythoncomplete#Complete
-let g:superTabDefaultCompletionType="context"
-set completeopt=menuone,longest,preview
+"au FileType python set omnifunc=pythoncomplete#Complete
+"let g:superTabDefaultCompletionType="context"
+"set completeopt=menuone,longest,preview
 
 " File browsing using NERDTree.
 map <F4> :NERDTreeToggle<CR>
 let NERDTreeIgnore=['\.pyc$']
 
 " Refactoring and goto definition.
-map <Leader>j :RopeGotoDefinition<CR>
-map <Leader>r :RopeRename<CR>
+"map <Leader>j :RopeGotoDefinition<CR>
+"map <Leader>r :RopeRename<CR>
 
 " Locate the ack-grep command and use it to do fuzzy searches.
-let g:ackprg="ack-grep -H --nocolor --nogroup --column"
-nmap <Leader>f <Esc>:Ack!
+"let g:ackprg="ack-grep -H --nocolor --nogroup --column"
+"nmap <Leader>f <Esc>:Ack!
 
 " Partially hide the Windows line termination char (\\r).  
 match Ignore /\r$/
