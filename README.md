@@ -13,26 +13,9 @@
 
         source ~/.vim/vimrc
 
+1. Install pep8:
 
-1. Install ack and pep8:
-
-        $ sudo apt-get install ack-grep pep8
-
-
-1. Add the following line to vimrc to locate the ack-grep command (already done
-in this repository's accompanying vimrc):
-
-        let g:ackprg="ack-grep -H --nocolor --nogroup --column"
-
-
-1. Avoid key-binding conflicts with Makegreen, change:
-
-        "map <unique> <silent> <Leader>t :call MakeGreen()<cr>
-
-    to
-
-        map <unique> <silent> <Leader>g :call MakeGreen()<cr>
-
+        $ sudo apt-get install pep8
 
 1. Create the directory in which Vim persistent undo data will be stored:
 
@@ -51,4 +34,25 @@ The following are plugins that have previously been installed as Pathogen bundle
     supertab
     surround
     syntastic
+
+When the above modules were being used it was necessary to perform some additional actions:
+
+1. Install ack:
+
+        $ sudo apt-get install ack-grep
+
+
+1. Add the following line to vimrc to locate the ack-grep command (already done
+in this repository's accompanying vimrc):
+
+        let g:ackprg="ack-grep -H --nocolor --nogroup --column"
+
+
+1. Avoid key-binding conflicts with Makegreen, change:
+
+        "map <unique> <silent> <Leader>t :call MakeGreen()<cr>
+
+    to
+
+        map <unique> <silent> <Leader>g :call MakeGreen()<cr>
 
