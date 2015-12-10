@@ -3,6 +3,7 @@
 set encoding=utf-8
 
 " Choose a colour scheme.
+set t_Co=256
 colorscheme paul-elflord
 
 " Disable Ex mode to avoid unnecessary pain when hitting Q by mistake.
