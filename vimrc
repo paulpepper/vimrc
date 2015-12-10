@@ -153,7 +153,8 @@ fun! <SID>StripTrailingWhitespaces()
 endfun
 autocmd FileType c,cpp,java,php,ruby,python autocmd BufWritePre <buffer> :call <SID>StripTrailingWhitespaces()
 
-" Persistent undo
+" Persistent undo - an undo directory MUST exist for undo to work.
+call system('mkdir ' . '~/.vim-undo')
 set undodir=~/.vim-undo
 set undofile
 set undolevels=1000
