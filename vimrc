@@ -16,6 +16,9 @@ colorscheme paul-elflord
 inoremap jj <Esc>
 inoremap JJ <Esc>
 
+" Scrolling.
+set sidescroll=1
+
 " Window navigation shortcuts.
 nmap <silent> <C-j> :wincmd j<CR>
 nmap <silent> <C-k> :wincmd k<CR>
