@@ -83,8 +83,7 @@ au FileType python set colorcolumn=80
 "     http://sontek.net/blog/detail/turning-vim-into-a-modern-python-ide
 
 " Call pathogen to install bundels before applying some settings.
-call pathogen#runtime_append_all_bundles()
-call pathogen#helptags()
+call pathogen#infect()
 
 
 " Code folding.
