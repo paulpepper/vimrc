@@ -1,3 +1,8 @@
+" Useful resources:
+"     http://sontek.net/blog/detail/turning-vim-into-a-modern-python-ide
+
+" Call pathogen to install bundels before applying some settings.
+call pathogen#infect()
 
 " Use Unicode.
 set encoding=utf-8
@@ -78,13 +83,6 @@ set expandtab
 
 " Show a margin at column 80 on Python files.
 au FileType python set colorcolumn=80
-
-" See following url for details about config below:
-"     http://sontek.net/blog/detail/turning-vim-into-a-modern-python-ide
-
-" Call pathogen to install bundels before applying some settings.
-call pathogen#infect()
-
 
 " Code folding.
 set foldmethod=indent
