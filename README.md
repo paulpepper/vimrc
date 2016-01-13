@@ -22,6 +22,7 @@
         $ mkdir ~/.vim-undo
 
 The following are plugins that have previously been installed as Pathogen bundles, but through lack of use have been removed:
+
     command-t
     fugitive
     git
