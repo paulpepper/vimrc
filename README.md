@@ -17,7 +17,7 @@
 
         $ sudo apt-get install pep8
 
-1. Create the directory in which Vim persistent undo data will be stored:
+1. Create the directory in which Vim persistent undo data will be stored - persistence fails otherwise:
 
         $ mkdir ~/.vim-undo
 
@@ -35,15 +35,14 @@ The following are plugins that have previously been installed as Pathogen bundle
     surround
     syntastic
 
-When the above modules were being used it was necessary to perform some additional actions:
+When the above modules were being used it was necessary to perform the following additional actions:
 
 1. Install ack:
 
         $ sudo apt-get install ack-grep
 
 
-1. Add the following line to vimrc to locate the ack-grep command (already done
-in this repository's accompanying vimrc):
+1. Add the following line to vimrc to locate the ack-grep command (already done in this repository's accompanying vimrc):
 
         let g:ackprg="ack-grep -H --nocolor --nogroup --column"
 
