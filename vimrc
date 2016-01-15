@@ -88,6 +88,9 @@ au FileType python set colorcolumn=80
 set foldmethod=indent
 set foldlevel=99
 
+" Always display the airline status line.
+set laststatus=2
+
 " Task lists.
 map <Leader>td <Plug>TaskList
 
@@ -111,6 +114,9 @@ let g:pep8_map='<Leader>8'
 " File browsing using NERDTree.
 map <F4> :NERDTreeToggle<CR>
 let NERDTreeIgnore=['\.pyc$']
+
+" Buffer viewing.
+map <F5> :MBEToggle<CR>
 
 " Refactoring and goto definition.
 "map <Leader>j :RopeGotoDefinition<CR>
