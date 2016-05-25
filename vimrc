@@ -101,7 +101,6 @@ map <Leader>td <Plug>TaskList
 filetype on
 filetype plugin indent on
 syntax on
-let g:pyflakes_use_quickfix=0
 
 " Pep8 validation.
 let g:pep8_map='<Leader>8'
@@ -114,6 +113,7 @@ let g:pep8_map='<Leader>8'
 " File browsing using NERDTree.
 map <F4> :NERDTreeToggle<CR>
 let NERDTreeIgnore=['\.pyc$']
+let g:NERDTreeWinSize=36
 
 " Buffer viewing.
 map <F5> :MBEToggle<CR>
@@ -154,7 +154,9 @@ fun! <SID>StripTrailingWhitespaces()
     %s/\s\+$//e
     call cursor(l, c)
 endfun
-autocmd FileType c,cpp,java,php,ruby,python autocmd BufWritePre <buffer> :call <SID>StripTrailingWhitespaces()
+" Disabled for now while working with files that contain lots of tailing white
+" space - causes lots of changes when committing to source control.
+"autocmd FileType c,cpp,java,php,ruby,python autocmd BufWritePre <buffer> :call <SID>StripTrailingWhitespaces()
 
 " Persistent undo - an undo directory MUST exist for undo to work.
 call system('mkdir ' . '~/.vim-undo')
