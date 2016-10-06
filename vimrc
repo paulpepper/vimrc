@@ -66,7 +66,7 @@ set ignorecase
 set smartcase
 
 " Put yanked (copied) text to system clipboard.
-set clipboard=unnamed
+set clipboard+=unnamedplus
 
 " Non-compatible with original vi, including non-emulation of bugs.
 set nocompatible
@@ -130,22 +130,22 @@ map <F5> :MBEToggle<CR>
 match Ignore /\r$/
 
 " Python navigation stuff.
-python << EOF
-import os
-import sys
-import vim
-# Add virtualenv's site-packages to vim path.
-if 'VIRTUAL_ENV' in os.environ:
-	project_base_dir = os.environ['VIRTUAL_ENV']
-	sys.path.insert(0, project_base_dir)
-	activate_this = os.path.join(project_base_dir, 'bin/activate_this.py')
-	execfile(activate_this, dict(__file__=activate_this))
+"python << EOF
+"import os
+"import sys
+"import vim
+" Add virtualenv's site-packages to vim path.
+"if 'VIRTUAL_ENV' in os.environ:
+"	project_base_dir = os.environ['VIRTUAL_ENV']
+"	sys.path.insert(0, project_base_dir)
+"	activate_this = os.path.join(project_base_dir, 'bin/activate_this.py')
+"	execfile(activate_this, dict(__file__=activate_this))
 
-# Jump to filename using 'gf'
-#for p in sys.path:
-#    if os.path.isdir(p):
-#        vim.command(r"set path+=%s" % (p.replace(" ", r"\ ")))
-EOF
+" Jump to filename using 'gf'
+"for p in sys.path:
+"    if os.path.isdir(p):
+"        vim.command(r"set path+=%s" % (p.replace(" ", r"\ ")))
+"EOF
 
 " Strip trailing white space.
 fun! <SID>StripTrailingWhitespaces()
