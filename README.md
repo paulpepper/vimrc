@@ -13,9 +13,9 @@
 
         source ~/.vim/vimrc
 
-1. Install pep8:
+1. Install pep8 and flake8:
 
-        $ sudo apt-get install pep8
+        $ sudo apt-get install pep8 flake8
 
 1. Create the directory in which Vim persistent undo data will be stored - persistence fails otherwise:
 
@@ -55,4 +55,18 @@ When the above modules were being used it was necessary to perform the following
     to
 
         map <unique> <silent> <Leader>g :call MakeGreen()<cr>
+
+
+# Add New Vim Plugin
+
+Vim plugins are loaded by Pathogen and are installed and managed as git
+submodules. Add a new plugin by cloning the vim plugin into the bundle
+directory as follows:
+
+    $ git submodule add https://github.com/nvie/vim-flake8.git bundle/vim-flake8
+
+Then commit the submodule changes (in this case .gitmodules will have been
+updated and the new package added):
+
+    $ git add -m "Added vim-flake8 plugin."
 
