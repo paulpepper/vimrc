@@ -112,7 +112,7 @@ let g:pep8_map='<Leader>8'
 
 " File browsing using NERDTree.
 map <F4> :NERDTreeToggle<CR>
-let NERDTreeIgnore=['\.pyc$']
+let NERDTreeIgnore=['\.pyc$', '__pycache']
 let g:NERDTreeWinSize=36
 
 " Buffer viewing.
