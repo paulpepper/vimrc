@@ -148,15 +148,19 @@ match Ignore /\r$/
 "EOF
 
 " Strip trailing white space.
-fun! <SID>StripTrailingWhitespaces()
-    let l = line(".")
-    let c = col(".")
+fun! TrimWhitespace()
+    let l:save = winsaveview()
     %s/\s\+$//e
-    call cursor(l, c)
+    call winrestview(l:save)
 endfun
-" Disabled for now while working with files that contain lots of tailing white
-" space - causes lots of changes when committing to source control.
-"autocmd FileType c,cpp,java,php,ruby,python autocmd BufWritePre <buffer> :call <SID>StripTrailingWhitespaces()
+
+command! TrimWhitespace call TrimWhitespace()
+:noremap <Leader>w :call TrimWhitespace()<CR>
+
+" Disabled automatic whitespace trimming for now while working with files that
+" contain lots of tailing white space - causes lots of changes when committing
+" to source control.
+"autocmd FileType c,cpp,java,php,ruby,python autocmd BufWritePre <buffer> :call TrimWhitespace()
 
 " Persistent undo - an undo directory MUST exist for undo to work.
 call system('mkdir ' . '~/.vim-undo')
