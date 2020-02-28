@@ -11,7 +11,7 @@
 
 1. Edit `~/.vimrc` and add a line to source the file `~/.vim/vimrc`
 
-        source ~/.vim/vimrc
+        :source ~/.vim/vimrc
 
 1. Install pep8 and flake8:
 
