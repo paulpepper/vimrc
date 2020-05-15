@@ -2,6 +2,18 @@
 
 1. Check out the project as `~/.vim` (assuming it doesn't currently exist).
 
+## Automatic Setup
+
+Change into the newly created `.vim` directory and source the setup.sh script.
+
+    $ cd ~/.vim
+    $ source setup.sh
+
+You're done.
+
+
+## Manual Setup
+
 1. Get the project's submodules:
 
         $ cd .vim
